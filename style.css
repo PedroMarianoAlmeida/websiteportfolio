@@ -3,7 +3,11 @@
     background-size: cover;
     background-position: center bottom;
     height: 575px;
-  }
+}
+
+.about-section{
+    background-color: orangered;
+}
 
 
 
