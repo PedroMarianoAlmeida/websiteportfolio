@@ -13,6 +13,21 @@
     font-size: 50px;
 }
 
+.portfolio-image{
+    background-image: url(images/450x245.png);
+    background-size: cover;
+    background-position: center bottom;
+    height: 245px;   
+}
+
+.portfolio-text{
+    opacity: 0;
+}
+
+.portfolio-text:hover{
+    opacity: .5;
+}
+
 
 
 .opacity-dot-five {
