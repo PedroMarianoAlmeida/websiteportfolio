@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <title>Functions</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-dark">
+        <!-- nav for lg screens -->
+        <div class="d-none d-lg-flex flex-grow-1">
+            <a class="navbar-brand text-white mx-3" href="#">Pedro Almeida</a>
+
+            <div class="navbar-nav ml-auto align-items-center">
+                <a class="nav-item nav-link mx-1 text-white" href="/index.html#about">About</a>
+                <a class="nav-item nav-link mx-1 text-white" href="/index.html#skills">Skills</a>
+                <a class="nav-item nav-link mx-1 text-white" href="/index.html#portfolio">Portfolio</a>
+                <a class="nav-item nav-link mx-1 text-white" href="/index.html#contact">Contact</a> 
+                <a class="nav-item nav-link mx-1 text-white" href="/blog/">Blog</a>
+            </div>
+        </div>
+        
+        <!-- nav for shorter than lg screens -->
+        <div class="d-lg-none flex-grow-1">
+            <a class="navbar-brand d-lg-flex text-white mx-3" href="#">Pedro Almeida</a>
+            <a class="navbar-toggler navbar-brand float-right border text-white" mx-5" role="button" data-toggle="collapse" href="#navbarMenu">III</a>
+            <div class="collapse navbar-collapse bg-dark" id="navbarMenu">
+                <a class="nav-item nav-link mx-1 text-white" href="/index.html#about">About</a>
+                <a class="nav-item nav-link mx-1 text-white" href="/index.html#skills">Skills</a>
+                <a class="nav-item nav-link mx-1 text-white" href="/index.html#portfolio">Portfolio</a>
+                <a class="nav-item nav-link mx-1 text-white" href="/index.html#contact">Contact</a> 
+                <a class="nav-item nav-link mx-1 text-white" href="/blog/">Blog</a> 
+            </div>        
+        </div>              
+    </nav>
+
+    
+
+    <div class="container mw-100 mb-5">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <h1 class="mt-5 pt-3 text-center">Functions in JavaScript</h1>
+            </div>
+
+            <div class="col-12 my-3">
+                <h2>To understand this article you need to know:</h2>
+                <ul>
+                    <li>Fundamentals of JavaScript (variables, operator, etc)</li>
+                    <li>Loops and fork (if, for, while, etc)</li>
+                    <li>Fundamentals of HTML (and how to work with HTML and JavaScript together at browser)</li>
+                </ul>
+            </div>
+
+            <div class="col-12">
+                <h2 id="theory">What are functions:</h2>
+                <p class="text-justify">Functions are a piece of code that not follow the regular flow of the program (top to bottom). When the compiler sees a function, all code inside it is ignored and the program starts the reading again right after the end of the function.</p>
+                <p>But when you want this code runs, you have to call it(or invoke, it is the same thing). Then the program enters the function and executes like a regular code, and after its ends, the program comes back to the line of the calling.</p>
+                <h2>Practice time:</h2>
+                <p>In this exercise, my objective will be to dynamically change the text in HTML, I strongly recommend that you write the code in our own text editor and test each step of the process. </p>
+                
+                <ul>
+                    <li>First lets write some inicial code to work:</li>
+                    <div class="container border border-secondary d-bolck m-4 bg-light">
+                        <code>
+                            <div>&lt;body>
+                                <div class="ml-3 mb-2">&lt;h1 id="my-text">My first text&lt;/h1></div>                        
+                    
+                                <div class="ml-3"> &lt;script>
+                                    
+                                    <div class="ml-3 my-2">let text = document.getElementById("my-text");</div>
+                                &lt;/script> </div>                          
+                            &lt;/body> </div>                       
+                        </code>
+                    </div>
+
+                    <li>Now if I want to change this text, I can write just one more line of code
+
+                        <div class="container border border-secondary d-bolck m-4 bg-light">
+                            <code>
+                                <div>&lt;body>
+                                    <div class="ml-3 mb-2">&lt;h1 id="my-text">My first text&lt;/h1></div>                        
+                        
+                                    <div class="ml-3"> &lt;script>
+                                        
+                                        <div class="ml-3 mt-2">let text = document.getElementById("my-text");</div>
+                                        <div class="ml-3 mb-2"><strong>text.innerHTML = "Modified Text";</strong></div>
+                                    &lt;/script> </div>                          
+                                &lt;/body> </div>                       
+                            </code>
+                        </div>
+                    </li>
+
+                    <li><p>Let's do the same thing using a function?</p>
+                        <p>First I will wrap the "modified text" command in a function</p>
+
+                        <div class="container border border-secondary d-bolck m-4 bg-light">
+                            <code>
+                                <div>&lt;body>
+                                    <div class="ml-3 mb-2">&lt;h1 id="my-text">My first text&lt;/h1></div>                        
+                        
+                                    <div class="ml-3"> &lt;script>
+                                        
+                                        <div class="ml-3 my-2">let text = document.getElementById("my-text");</div>
+                                        <div class="ml-3 mt-2"><strong>function changeText(){</strong>
+                                            <div class="ml-3">text.innerHTML = "Modified Text";</div>
+                                            <strong>}</strong></div>
+                                    &lt;/script> </div>                          
+                                &lt;/body> </div>                       
+                            </code>
+                        </div>
+
+                    </li>
+
+                    <li><p>Did you test? What happened?</p>                        
+                        <p>Exactly, nothing happened... do you know why? <a href="#theory">Click here</a> to go back to the explanation of the function and try to figure out</p>
+                        <p>As you may notice, I write the function but I never call her, so let's do this right now:</p>
+
+                        <div class="container border border-secondary d-bolck m-4 bg-light">
+                            <code>
+                                <div>&lt;body>
+                                    <div class="ml-3 mb-2">&lt;h1 id="my-text">My first text&lt;/h1></div>                        
+                        
+                                    <div class="ml-3"> &lt;script>
+                                        
+                                        <div class="ml-3 my-2">let text = document.getElementById("my-text");</div>
+                                        <div class="ml-3 mt-2">function changeText(){
+                                            <div class="ml-3">text.innerHTML = "Modified Text";</div>
+                                            }</div>
+                                        <div class="ml-3 my-2"><strong>changeText()</strong></div>
+                                    &lt;/script> </div>                          
+                                &lt;/body> </div>                       
+                            </code>
+                        </div>
+
+                    </li>
+
+                    <li><p>Yes, it is that simple... to call a function you have to write its name and one pair of parentheses "()" right after. Now everything is work again.</p>
+                        <p>Theses parenthesis, also serve to enter with some data to use inside the function. It is called "arguments".</p>
+                            <p>Let's pass the new text of the element as an argument.</p>
+                            
+                            <div class="container border border-secondary d-bolck m-4 bg-light">
+                                <code>
+                                    <div>&lt;body>
+                                        <div class="ml-3 mb-2">&lt;h1 id="my-text">My first text&lt;/h1></div>                        
+                            
+                                        <div class="ml-3"> &lt;script>
+                                            
+                                            <div class="ml-3 my-2">let text = document.getElementById("my-text");</div>
+                                            <div class="ml-3 mt-2">function changeText(<strong>newText</strong>){
+                                                <div class="ml-3">text.innerHTML = <strong>newText</strong>;</div>
+                                                }</div>
+                                            <div class="ml-3 my-2">changeText(<strong>"My new text"</strong>)</div>
+                                        &lt;/script> </div>                          
+                                    &lt;/body> </div>                       
+                                </code>
+                            </div>
+                    </li>
+                    <li><p>Pretty awesome, isn't it? Now any text inside the parentheses when the function is called is inserting in the place.</p>
+                        <p>And even the element itself can be a argument.</p>
+
+                        <div class="container border border-secondary d-bolck m-4 bg-light">
+                            <code>
+                                <div>&lt;body>
+                                    <div class="ml-3 mb-2">&lt;h1 id="my-text">My first text&lt;/h1></div>                        
+                        
+                                    <div class="ml-3"> &lt;script>
+                                        
+                                        <div class="ml-3 my-2">let text = document.getElementById("my-text");</div>
+                                        <div class="ml-3 mt-2">function changeText(<strong>element</strong>, newText){
+                                            <div class="ml-3"><strong>text</strong>.innerHTML = newText;</div>
+                                        }</div>
+                                        <div class="ml-3 my-2">changeText(<strong>text</strong>, "My new text")</strong></div>
+                                    &lt;/script> </div>                          
+                                &lt;/body> </div>                       
+                            </code>
+                        </div>
+                    </li>                   
+                </ul>
+               
+                <h2 class="mt-4">Why you should use Functions</h2>
+                <p class="text-justify">In this particular case, maybe it looks like the code became more complex after the function, so why use it?</p>               
+                <ul>
+                    <li><p>Better than explain, let me show to you:</p>
+                        <p>Now you understand how functions works, let's increase the complexity of the code and do the same thing we did before
+                        But this time there are two elements, and we will change two properties in each</p>
+                        
+                        <div class="container border border-secondary d-bolck m-4 bg-light">
+                            <code>
+                                <div>&lt;body>
+                                    <div class="ml-3 mb-2">&lt;h1 id="my-text">My first text&lt;/h1></div>
+                                    <div class="ml-3 mb-2"><strong>&lt;h1 id="my-other-text">My other text&lt;/h1></strong></div>                       
+                                        
+                                    <div class="ml-3"> &lt;script>
+                                        <div class="ml-3 mt-2">let text = document.getElementById("my-text");</div>
+                                        <div class="ml-3 mb-2"><strong>let otherText = document.getElementById("my-other-text");</strong></div>
+                                        <div class="ml-3 mb-2">text.innerHTML = "Modified Text";</div>
+                                        <div class="ml-3 mb-2"><strong>text.style.color = "blue";</strong></div>
+                                        <div class="ml-3 mb-2"><strong>otherText.innerHTML = "Modified Second Text";</strong></div>
+                                        <div class="ml-3 mb-2"><strong>otherText.style.color = "blue";</strong></div>
+                                    &lt;/script> </div>     
+                                &lt;/body> </div>                       
+                            </code>
+                        </div>                        
+                    </li>
+
+                    <li>Using function with arguments</li>
+                    <div class="container border border-secondary d-bolck m-4 bg-light">
+                        <code>
+                            <div>&lt;body>
+                                <div class="ml-3 mb-2">&lt;h1 id="my-text">My first text&lt;/h1></div>
+                                <div class="ml-3 mb-2"><strong>&lt;h1 id="my-other-text">My other text&lt;/h1></strong></div>                       
+                                    
+                                <div class="ml-3"> &lt;script>
+                                    <div class="ml-3 mt-2">let text = document.getElementById("my-text");</div>
+                                    <div class="ml-3 mb-2"><strong>let otherText = document.getElementById("my-other-text");</strong></div>
+                                    
+                                    <strong>
+                                        <div class="ml-3 my-2">function changeTextAndColor(element, newText, color){
+                                            <div class="ml-3 mt-2">element.innerHTML = newText;</div>
+                                            <div class="ml-3 mt-2">element.style.color = color;</div>
+                                        }</div>
+                                    </strong>
+                                    
+                                    <div class="ml-3 mb-2">changeTextAndColor(text, "First: Blue Text", "blue");</div>
+                                    <div class="ml-3 mb-2">changeTextAndColor(otherText, "Second: Red Text", "red");</div>
+
+                                &lt;/script> </div>     
+                            &lt;/body> </div>                       
+                        </code>
+                    </div>
+
+                    <li>Which code do you think is easier to read and understand... and change? And if it were more actions to do or more elements to contemplate, which code is became bigger?</li>
+                </ul>
+
+                <h2 class="mt-4">Conclusion</h2>
+                <p>Using functions help to maintain to code organized and clean. Besides helping to segment the code, so who is reading it and trying to understanding (other programmers and even you in the future) don't have to read all the code once. The code now can by readed by "chapters".</p>
+                <p>This is only an introduction to the theme, functions are a key piece in JavaScript, we will dig more into this in future articles.</p>
+            
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <footer class="container text-center mt-3 fixed-bottom">
+        Copyright © 2020 - Pedro Almeida Programmer
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+    
+</body>
+</html>
