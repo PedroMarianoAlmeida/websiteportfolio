@@ -1,0 +1,33 @@
+.nav-link, .navbar-brand, .title-news{ /* Why not work whith nav{}? */
+    color: black;
+}
+
+.title-news:hover{
+    color: black;
+}
+
+.link-news-footer:hover{
+    text-decoration: none;
+    color: darkblue;
+}
+
+.menu-news{
+    overflow-x: scroll; /*Not working how I like*/
+}
+
+.footer-title-column, .footer-disclaimer{
+    font-size: 14px;
+}
+
+.footer-bullet{
+    list-style-type: none;  
+}
+
+.footer-link{
+    color: gray;
+}
+
+.footer-link:hover{
+    color: gray;
+    text-decoration: underline;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="js/application.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <title>Shopping Card</title>
+  </head>
+  <body>
+    <h1>Shopping Card</h1>
+
+    <table id='main-table' class='table'>       
+
+    </table>
+
+    <form id='add-item'> 
+      <input type="text" placeholder="Name Item" name="name-item" required>
+      <input type="number" placeholder="Unitary Price" name='unity-price' required>
+      <input type="number" placeholder="QTY" name='qty' required>
+      <button>Create</button>
+    </form>
+    <h2>Total Price:</h2>
+    <h3 id='total-price'></h3>
+
+
+  </body>
+</html>

@@ -1,0 +1,7 @@
+.delete-item:hover{
+    cursor: pointer;
+}
+
+.completed-task {
+    text-decoration: line-through;
+}
