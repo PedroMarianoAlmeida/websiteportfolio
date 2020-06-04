@@ -20,18 +20,23 @@
     height: 245px;   
 }
 
+.this-website{
+    background-image: url(images/Portfolio/here.jpg);
+}
+
 .portfolio-text{
     opacity: 0;
+    color: white;
+    padding-top: 200px;
 }
+
 
 .portfolio-text:hover{
-    opacity: .5;
+    opacity: 1;
 }
 
-
-
 .opacity-dot-five {
-    opacity:0.5!important;
+    opacity:0.5;
 }
 
 .z-1{
