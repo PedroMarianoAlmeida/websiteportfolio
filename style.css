@@ -20,27 +20,12 @@
     height: 245px;   
 }
 
-#this-website-portfolio{
+.this-website-portfolio{
     background-image: url(images/Portfolio/here.jpg);
 }
 
-#checklist-porfolio{
+.checklist-portfolio{
     background-image: url(images/Portfolio/checklist.jpg);
-}
-
-#shopping-cart-portfolio{
-    background-image: url(images/Portfolio/shopping-cart.jpg);
-}
-
-#math-game-portfolio{
-    background-image: url(images/Portfolio/math-game.jpg);
-    background-position: center top;
-}
-
-#currency-converter-portfolio{
-    background-image: url(images/Portfolio/currency-converter.jpg);
-    background-position: center top;
-    width: 200px;
 }
 
 .portfolio-text{
