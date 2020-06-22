@@ -20,8 +20,12 @@
     height: 245px;   
 }
 
-.this-website{
+.this-website-portfolio{
     background-image: url(images/Portfolio/here.jpg);
+}
+
+.checklist-portfolio{
+    background-image: url(images/Portfolio/checklist.jpg);
 }
 
 .portfolio-text{
