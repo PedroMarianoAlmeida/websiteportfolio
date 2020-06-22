@@ -21,22 +21,37 @@
 }
 
 .this-website-portfolio{
-    background-image: url(images/Portfolio/here.jpg);
+    background-image: url(images/Portfolio/movie-finder.jpg);
 }
 
 .checklist-portfolio{
     background-image: url(images/Portfolio/checklist.jpg);
 }
 
+#airbnb-clone-portfolio{
+    background-image: url(images/Portfolio/airbnb-clone.png);
+    padding-top: 15px;
+}
+
+#shopping-cart-portfolio{
+    background-image: url(images/Portfolio/shopping-cart.jpg);
+}
+
+#math-game-portfolio{
+    background-image: url(images/Portfolio/math-game.jpg);
+    background-position: center top;
+}
+
+#currency-converter-portfolio{
+    background-image: url(images/Portfolio/currency-converter.jpg);
+    background-position: center top;
+    width: 200px;
+}
+
 .portfolio-text{
     opacity: 0;
     color: white;
     padding-top: 200px;
-}
-
-#airbnb-clone-portfolio{
-    background-image: url(images/Portfolio/airbnb-clone.png);
-    padding-top: 15px;
 }
 
 .portfolio-text:hover{
